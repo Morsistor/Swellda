@@ -5,16 +5,16 @@ app = Flask(__name__)
 def index():
     return "Index Page"
 
-@app.route("/hello/")
+@app.route("/hello")
 def hello():
     param1 = request.args.getlist('inventory')
     print(param1)
     print(request.args)
     return "Inventory: {}".format(param1)
 
-@app.route("/user/<name>/")
-def helloname(name):
-    return "Hello " + name + ' !'
+@app.route("/hyrulemarketplace")
+def hyrulemarket():
+    return render_template("hyrulemarketplace.html")
 
 @app.route("/templ/")
 @app.route("/templ/<var>")
