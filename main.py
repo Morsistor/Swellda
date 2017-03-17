@@ -2,9 +2,9 @@ from flask import Flask, url_for, render_template, request
 app = Flask(__name__)
 
 
-@app.route("/hyrulemarketplace")
+@app.route("/hyrulemarket")
 def hyrulemarket():
-    return render_template("hyrulemarketplace.html")
+    return render_template("hyrulemarket.html")
 
 @app.route("/castleyard")
 def yard():
@@ -17,6 +17,10 @@ def dun():
 @app.route("/castlebed")
 def bed():
     return render_template("castlebed.html")
+
+@app.route("/")
+def start():
+    return render_template("start.html")
 
 # @app.route("/hello/")
 # def hello():
