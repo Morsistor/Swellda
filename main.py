@@ -31,6 +31,14 @@ def gym():
 def work():
     return render_template("workout.html")
 
+@app.route("/basar")
+def basar():
+    return render_template("hyrulebasar.html")
+
+@app.route("/shop")
+def shop():
+    return render_template("shop.html")
+
 # Inventory
 # sword, shield, leather equipment, glass of milk, protein shake, barbell, sunglasses, Zelda's innocence, peanutbutter, steroids
 
