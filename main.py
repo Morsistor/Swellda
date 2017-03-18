@@ -18,9 +18,14 @@ def loc(location):
     for item in inv:
         inv_as_query = inv_as_query + "inv=" + item + "&"
 
+    if location == 'castledun' and 'smallkey' not in inv:
+        return redirect(url_for('loc', location='nosmallkey'))
+
     if location == 'hyrulegym' and 'barbell' not in inv:
         return redirect(url_for('loc', location='nobarbell'))
-    
+
+
+
     return render_template(location + ".html", inv=inv, inv_as_query=inv_as_query)
 
 if __name__ == "__main__":
