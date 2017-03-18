@@ -3,13 +3,13 @@
 
 {% block text %}
     <h1>You entered the Shop.</h1>
-    <p>The owner is a well known "special interest" connoisseur.</p>
-    <p>He might be interested in some kinky gear...</p>
+    <p>You can buy things here. Maybe.<br>
+    The owner is a well known "special interest" connoisseur. - He might be interested in some kinky gear...</p>
 {% endblock %}
 
 {% block options %}
-    <!--<p> <a href="http://127.0.0.1:5000/hyrulemarket?{{inv_as_query}}">Leave the Gym.</a></p>
-    <p> <a href="http://127.0.0.1:5000/workout?{{inv_as_query}}">Start working out.</a></p>-->
+    <p> <a href="http://127.0.0.1:5000/hyrulebasar?{{inv_as_query_minus_mask}}inv=Protein%20Shake&">Exchange leather mask for protein shake.</a></p>
+    <p> <a href="http://127.0.0.1:5000/hyrulebasar?{{inv_as_query}}">Leave.</a></p>
 {% endblock %}
 
 {% block inventory %}
