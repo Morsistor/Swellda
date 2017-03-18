@@ -4,8 +4,12 @@ app = Flask(__name__)
 # The Legend of Swellda
 
 @app.route("/")
-def index():
-    return render_template("index.html")
+def start():
+    return render_template("start.html")
+
+@app.route("/hyrulemarket")
+def hyrulemarket():
+    return render_template("hyrulemarket.html")
 
 @app.route("/castleyard")
 def yard():
