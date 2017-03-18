@@ -23,6 +23,14 @@ def dun():
 def bed():
     return render_template("castlebed.html")
 
+@app.route("/hyrulegym")
+def gym():
+    return render_template("hyrulegym.html")
+
+@app.route("/workout")
+def work():
+    return render_template("workout.html")
+
 # Inventory
 # sword, shield, leather equipment, glass of milk, protein shake, barbell, sunglasses, Zelda's innocence, peanutbutter, steroids
 
