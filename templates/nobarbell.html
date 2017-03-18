@@ -1,0 +1,16 @@
+
+{% extends "layout.html" %}
+{% block title %}Entrance denied{% endblock %}
+
+{% block text %}
+    <h1>You can't enter the gym right now.</h1>
+    <p>The bouncer won't believe you're swole enough. You need a barbell to prove it.</p>
+{% endblock %}
+
+{% block options %}
+    <p> <a href="http://127.0.0.1:5000/hyrulemarket?{{inv_as_query}}">Turn around.</a></p>
+{% endblock %}
+
+{% block inventory %}
+    <p>Inventory: {{inv}}</p>
+{% endblock %}
