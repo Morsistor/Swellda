@@ -1,6 +1,8 @@
 from flask import Flask, url_for, render_template, request
 app = Flask(__name__)
 
+# The Legend of Swellda
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -17,9 +19,17 @@ def dun():
 def bed():
     return render_template("castlebed.html")
 
+# Inventory
+# sword, shield, leather equipment, glass of milk, protein shake, barbell, sunglasses, Zelda's innocence, peanutbutter, steroids
+
+@app.route("/i/<location>/")
+def inventory(location):
+    param1 = request.args.getList('inv')
+    return "Inventory: {}".format(param1)
+
 # @app.route("/hello/")
 # def hello():
-#     param1 = request.args.getlist('inventory')
+#     param1 = request.args.getlist('inv')
 #     print(param1)
 #     print(request.args)
 #     return "Inventory: {}".format(param1)
