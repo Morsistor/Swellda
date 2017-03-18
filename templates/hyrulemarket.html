@@ -1,4 +1,4 @@
-<!doctype html>
+<!--<!doctype html>
 <html>
 <head>
     <title>Hyrule Marketplace</title>
@@ -13,4 +13,22 @@
     <hr>
     <p>Inventory: {{inv}}</p>
 </body>
-</html>
+</html>-->
+
+{% extends "layout.html" %}
+{% block title %}Hyrule Marketplace{% endblock %}
+
+{% block text %}
+    <h1>You entered the Hyrule Marketplace.</h1>
+    <p>Amazing stuff all around!</p>
+{% endblock %}
+
+{% block options %}
+    <p> <a href="http://127.0.0.1:5000/castleyard?{{inv_as_query}}">Return to the castle</a>.</p>
+    <p> <a href="http://127.0.0.1:5000/hyrulegym?{{inv_as_query}}">Enter the Hyrule Gym.</a></p>
+    <p> <a href="http://127.0.0.1:5000/hyrulebasar?{{inv_as_query}}">Enter the Hyrule Basar.</a></p>
+{% endblock %}
+
+{% block inventory %}
+    <p>Inventory: {{inv}}</p>
+{% endblock %}

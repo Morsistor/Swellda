@@ -1,4 +1,4 @@
-<!doctype html>
+<!--<!doctype html>
 <html>
 <head>
     <title>Workout done!</title>
@@ -11,4 +11,20 @@
     <hr>
     <p>Inventory: {{inv}}</p>
 </body>
-</html>
+</html>-->
+
+{% extends "layout.html" %}
+{% block title %}Workout done!{% endblock %}
+
+{% block text %}
+    <h1>Another hard workout done!</h1>
+    <p>You should go see Zelda now. ( ͡° ͜ʖ ͡°)</p>
+{% endblock %}
+
+{% block options %}
+    <p> <a href="http://127.0.0.1:5000/hyrulemarket?{{inv_as_query}}">You leave the gym feeling a bit more swole.</a></p>
+{% endblock %}
+
+{% block inventory %}
+    <p>Inventory: {{inv}}</p>
+{% endblock %}

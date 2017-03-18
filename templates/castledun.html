@@ -1,4 +1,4 @@
-<!doctype html>
+<!--<!doctype html>
 <html>
 <head>
     <title>Dungeon</title>
@@ -12,4 +12,21 @@
     <hr>
     <p>Inventory: {{inv}}</p>
 </body>
-</html>
+</html>-->
+
+{% extends "layout.html" %}
+{% block title %}Dungeon{% endblock %}
+
+{% block text %}
+    <h1>You entered the dungeon.</h1>
+    <p>Don't touch the leather stuff! Das nasty!</p>
+{% endblock %}
+
+{% block options %}
+    <p>Creep into <del>Zelda's</del> your <a href="http://127.0.0.1:5000/castlebed?{{inv_as_query}}">bedroom</a>.</p>
+    <p>Escape to the <a href="http://127.0.0.1:5000/castleyard?{{inv_as_query}}">courtyard</a>.</p>
+{% endblock %}
+
+{% block inventory %}
+    <p>Inventory: {{inv}}</p>
+{% endblock %}

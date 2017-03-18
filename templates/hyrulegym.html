@@ -1,7 +1,7 @@
-<!doctype html>
+<!--<!doctype html>
 <html>
 <head>
-    <title>Hyrule Marketplace</title>
+    <title>Hyrule Gym</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -12,5 +12,22 @@
     <hr>
     <p>Inventory: {{inv}}</p>
 </body>
-</html>
-     
+</html>-->
+
+{% extends "layout.html" %}
+{% block title %}Hyrule Gym{% endblock %}
+
+{% block text %}
+    <h1>You entered the Hyrule Gym.</h1>
+    <p>Do you wanna get swole?</p>
+    <p style="font-size:20%;">And thereby accept a 24-month subscription for only 1.000.000< Rupees?</p>
+{% endblock %}
+
+{% block options %}
+    <p> <a href="http://127.0.0.1:5000/hyrulemarket?{{inv_as_query}}">Leave the Gym.</a></p>
+    <p> <a href="http://127.0.0.1:5000/workout?{{inv_as_query}}">Start working out.</a></p>
+{% endblock %}
+
+{% block inventory %}
+    <p>Inventory: {{inv}}</p>
+{% endblock %}

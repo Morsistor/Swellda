@@ -1,4 +1,17 @@
-<!doctype html>
-<title> Shop </title>
+{% extends "layout.html" %}
+{% block title %}Shop{% endblock %}
 
-    <h1>Placeholder</h1>
+{% block text %}
+    <h1>You entered the Shop.</h1>
+    <p>The owner is a well known "special interest" connoisseur.</p>
+    <p>He might be interested in some kinky gear...</p>
+{% endblock %}
+
+{% block options %}
+    <!--<p> <a href="http://127.0.0.1:5000/hyrulemarket?{{inv_as_query}}">Leave the Gym.</a></p>
+    <p> <a href="http://127.0.0.1:5000/workout?{{inv_as_query}}">Start working out.</a></p>-->
+{% endblock %}
+
+{% block inventory %}
+    <p>Inventory: {{inv}}</p>
+{% endblock %}

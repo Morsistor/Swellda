@@ -1,4 +1,4 @@
-<!doctype html>
+<!--<!doctype html>
 <html>
 <head>
     <title>Hyrule Basar</title>
@@ -12,4 +12,21 @@
     <hr>
     <p>Inventory: {{inv}}</p>
 </body>
-</html>
+</html>-->
+
+{% extends "layout.html" %}
+{% block title %}Hyrule Basar{% endblock %}
+
+{% block text %}
+    <h1>You entered the Hyrule Basar.</h1>
+    <p>You can probably buy some cool stuff around here!</p>
+{% endblock %}
+
+{% block options %}
+    <p> <a href="http://127.0.0.1:5000/shop?{{inv_as_query}}">Buy some wares.</a></p>
+    <p> <a href="http://127.0.0.1:5000/hyrulemarket?{{inv_as_query}}">Leave the basar.</a></p> 
+{% endblock %}
+
+{% block inventory %}
+    <p>Inventory: {{inv}}</p>
+{% endblock %}
