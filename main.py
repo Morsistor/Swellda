@@ -20,10 +20,6 @@ def loc(location):
 # Inventory
 # sword, shield, leather equipment, glass of milk, protein shake, barbell, sunglasses, Zelda's innocence, peanutbutter, steroids
 
-@app.route("/i/<location>/")
-def inventory(location=None):
-    param1 = request.args.getList('inv')
-    return "Inventory: {}".format(param1)
 
 # @app.route("/hello/")
 # def hello():
