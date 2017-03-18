@@ -1,6 +1,14 @@
 <!doctype html>
-<title> Hyrule Marketplace</title>
-
+<html>
+<head>
+    <title>Hyrule Marketplace</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
     <h1>You entered the Hyrule Marketplace</h1>
-
-    <p> <a href="http://127.0.0.1:5000/castleyard">Return to the castle</a>.</p>
+    <hr>
+    <p> <a href="http://127.0.0.1:5000/castleyard?{{inv_as_query}}">Return to the castle</a>.</p>
+    <hr>
+    <p>Inventory: {{inv}}</p>
+</body>
+</html>

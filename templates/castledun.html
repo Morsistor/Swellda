@@ -1,5 +1,15 @@
 <!doctype html>
-<title>SwelldaDungeon</title>
-<h1>You entered the dungeon. Don't touch the leather stuff!</h1>
-<p>Creep into <del>Zelda's</del> your <a href="http://127.0.0.1:5000/castlebed">bedroom</a>.</p>
-<p>Escape to the <a href="http://127.0.0.1:5000/castleyard">courtyard</a>.</p>
+<html>
+<head>
+    <title>Dungeon</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>You entered the dungeon. Don't touch the leather stuff!</h1>
+    <hr>
+    <p>Creep into <del>Zelda's</del> your <a href="http://127.0.0.1:5000/castlebed?{{inv_as_query}}">bedroom</a>.</p>
+    <p>Escape to the <a href="http://127.0.0.1:5000/castleyard?{{inv_as_query}}">courtyard</a>.</p>
+    <hr>
+    <p>Inventory: {{inv}}</p>
+</body>
+</html>

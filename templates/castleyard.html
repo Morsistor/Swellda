@@ -1,7 +1,16 @@
 <!doctype html>
-<title>SwelldaCastleYard</title>
-<h1>You entered the castle's courtyard.</h1>
-<p><a href="http://127.0.0.1:5000/hyrulemarket">Leave</a> the castle.</p>
-<p>Go to <del>Zelda's</del> your <a href="http://127.0.0.1:5000/castlebed">bedroom</a>.</p>
-<p>Enter the <a href="http://127.0.0.1:5000/castledun">dungeon</a>.</p>
- 
+<html>
+<head>
+    <title>SwelldaCastleYard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>You entered the castle's courtyard.</h1>
+    <hr>
+    <p><a href="http://127.0.0.1:5000/hyrulemarket?{{inv_as_query}}">Leave</a> the castle.</p>
+    <p>Go to <del>Zelda's</del> your <a href="http://127.0.0.1:5000/castlebed?{{inv_as_query}}">bedroom</a>.</p>
+    <p>Enter the <a href="http://127.0.0.1:5000/castledun?{{inv_as_query}}">dungeon</a>.</p>
+    <hr>
+    <p>Inventory: {{inv}}</p>
+</body>
+</html>
