@@ -25,12 +25,9 @@ def loc(location):
     for item in inv:
         inv_as_query = inv_as_query + "inv=" + item + "&"
 
-    if location == 'hyrulegym' and 'Protein Shacke' not in inv:
+    if location == 'hyrulegym' and 'Protein Shake' not in inv:
         return redirect(url_for('loc', location='noproteinshake'))
 
-
-
-    return render_template(location + ".html", inv=inv, inv_as_query=inv_as_query)
 
     # if ads == "yes":
     #     "display ad"
