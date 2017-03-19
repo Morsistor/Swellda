@@ -7,10 +7,22 @@
     <body>
         <div id="text">{% block text %}{% endblock %}</div>
         <hr>
-        <div id="options">{% block options %}{% endblock %}</div>
+        <div id="options">
+        <div id="adleft" class="dynamic-content"><img src="/static/pics/ad{{adnum1}}.jpg" alt="Click me, I'm an ad!" style="float:left;width:250px;height:auto;"></div>
+        <div id="adright" class="dynamic-content"><img src="/static/pics/ad{{adnum1}}.jpg" alt="Click me, I'm an ad!" style="float:right;width:250px;height:auto;"></div>
+        {% block options %}{% endblock %}
+        </div>
         <hr>
         <div id="inventory">{% block inventory %}{% endblock %}</div>
-        <hr>
-        <img src="/static/pics/ad{{adnums}}.jpg" alt="Click me, I'm an ad!" style="width:auto;height:auto;">
+        <hr><br>
+        <div id="adbottom" class="dynamic-content"><img src="/static/pics/ad{{adnum2}}.jpg" alt="Click me, I'm an ad!" style="width:600px;height:auto;"></div>
+        <script>
+            var dynamicContent = "{{ads}}";
+            if (dynamicContent !== 'yes') {
+			    document.querySelector('#adleft').style.display="none";
+                document.querySelector('#adright').style.display="none";
+                document.querySelector('#adbottom').style.display="none";
+		    }
+        </script>
     </body>
 </html>
