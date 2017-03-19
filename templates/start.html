@@ -5,10 +5,28 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Swellda!</h1>
+    <h1 style="color:#e6e600"><u>Swellda!</u></h1>
     <p>Welcome to Swellda! This is a text-adventure about Link's journey to becoming a swell dude!</p>
-    <p>It's also Morsistor's and Super Mayo's first journey into the world of programming</p>
 
-    <a href="http://127.0.0.1:5000/castlebed">START THE GAME</a>.</p>
-    </body>
+    <p>It's also an early journey of Morsistor and Super Mayo into the world of programming.</p><hr><br>
+    <form method="get" action="http://127.0.0.1:5000/castlebed">
+        <input type="hidden" name="inv" value="Sword"><input type="hidden" name="inv" value="Shield"><input type="hidden" name="inv" value="Ocarina of Thyme">
+        To begin your adventure enter your name (or don't), choose your gender (or don't) and hit the "START GAME" button.<br><br><br><br>
+        <u>What is your name?</u><br>
+        <input type="text" name="name"><br><br>
+        <u>What is your gender?</u><br>
+        <input type="radio" name="gender" value="male">Male<br>
+        <input type="radio" name="gender" value="female">Female<br>
+        <input type="radio" name="gender" value="heli">Apache Attack Helicopter<br>
+        <input type="radio" name="gender" value="spec" checked>I'm <i style="color:#ff6699">special</i>!<br><br>
+        <u>Do you want us to show you (possibly) awesome ads?</u><br>
+        <input type="radio" name="ads" value="yes" checked>Absolutely!<br>
+        <input type="radio" name="ads" value="yes">Feel free to do so.<br>
+        <input type="radio" name="ads" value="yes">Go ahead.<br>
+        <input type="radio" name="ads" value="yes">Whatever...<br><br><br>
+        <input type="submit" value="START GAME">
+    </form>
+    <!--<p><a href="http://127.0.0.1:5000/castlebed?inv=Sword&inv=Shield&inv=Ocarina%20of%20Thyme">START THE GAME</a></p>-->
+</body>
+
 </html>
