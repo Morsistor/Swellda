@@ -39,6 +39,9 @@ def loc(location):
     if location == 'hyrulegym' and 'Protein Shake' not in inv:
         return redirect(url_for('loc', location='noproteinshake', inv=inv))
 
+    if location == 'shop' and 'Leather Mask' not in inv:
+        return redirect(url_for('loc', location='shop2', inv=inv))
+
     return render_template(location + ".html", inv=inv, inv_as_query=inv_as_query, inv_as_query_minus_mask=inv_as_query_minus_mask, adnums=adnums)
 
 if __name__ == "__main__":

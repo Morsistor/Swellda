@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Shop{% endblock %}
+
+{% block text %}
+    <h1>You entered the Shop.</h1>
+    <p>You can buy things here. Maybe.<br>
+    The owner is a well known "special interest" connoisseur. - He might be interested in some kinky gear...</p>
+{% endblock %}
+
+{% block options %}
+
+    <p>"You got a leather mask for me?" </p>
+    <p> <a href="http://127.0.0.1:5000/hyrulebasar?{{inv_as_query}}">Leave.</a></p>
+
+{% endblock %}
+
+{% block inventory %}
+    <p>Inventory: {{inv}}</p>
+{% endblock %}
